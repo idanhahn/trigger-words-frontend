@@ -1,0 +1,85 @@
+.main-grid{
+  display: grid;
+  grid-template-columns: 480px 1fr 60px;
+  grid-template-rows: 70px 1fr 60px;
+  grid-template-areas:
+    "header header header"
+    "left-panel main-section right-panel"
+    "footer footer right-panel";
+  font-family: Roboto;
+  font-size: 100%;
+}
+
+/* ------------ */
+/* -- Header -- */
+/* ------------ */
+
+header{
+  grid-area: header;
+  background-color: #F6F6F6;
+  border: 1px solid #979797;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-content: center;
+  box-shadow: 0 6px 4px #CBCBCB;
+}
+
+header .seperator{
+  min-width: 200px;
+  flex: 1 0 auto;
+}
+
+header a{
+  font-size: 1.5rem;
+  text-decoration: none;
+  color: #848484;
+  align-self: center;
+  margin: 0 40px 0 0;
+}
+
+header .user-name{
+  font-size: 1.5rem;
+  align-self: center;
+  margin: 0 20px 0 0;
+  cursor: pointer;
+}
+
+header .user-settings{
+  align-self: center;
+  margin: 0 40px 0 0;
+  cursor: pointer;
+}
+
+header .user-settings mat-icon{
+  font-size: 2.5rem;
+}
+
+
+header img{
+  width: 130px;
+  margin: 0 40px 0 10px;
+}
+
+/* Left Panel */
+.left-panel{
+  grid-area: left-panel;
+}
+
+
+/* Main Section */
+.main-section{
+  grid-area: main-section;
+}
+
+
+/* Right Panel */
+.right-panel{
+  grid-area: right-panel;
+}
+
+
+/* Footer */
+.footer{
+  grid-area: footer;
+}
