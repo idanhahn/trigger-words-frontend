@@ -8,6 +8,7 @@
     "footer footer right-panel";
   font-family: Roboto;
   font-size: 100%;
+  height: 100%;
 }
 
 /* ------------ */
@@ -61,10 +62,124 @@ header img{
   margin: 0 40px 0 10px;
 }
 
-/* Left Panel */
+/* ---------------- */
+/* -- Left Panel -- */
+/* ---------------- */
+
 .left-panel{
   grid-area: left-panel;
+  box-shadow: 0 0px 4px #CBCBCB;
+  height: 100%;
 }
+
+/* Left Panel Tabs */
+.left-panel-tabs{
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-content: center;
+  padding: 20px 20px 10px 30px;
+}
+
+.tab-option{
+  align-self: center;
+}
+
+.tab-divider{
+  border-right: 2px solid #979797;
+  height: 40px;
+}
+
+.tabs-separator{
+  border-bottom: 3px solid #979797;
+  margin: 0 10px 20px 20px;
+  box-shadow: 0 6px #F6F6F6;
+}
+
+/* Left Panel list item */
+.left-panel-list-item{
+  display: grid;
+  grid-template-columns: 80px 1fr;
+  padding: 5px 20px 10px 30px;
+  margin: 0 0 10px 0;
+}
+
+.left-panel-list{
+  height: 590px;
+  overflow-y: auto;
+}
+
+.list-item-separator{
+  border-bottom: 1px solid #979797;
+  margin: 0 10px 20px 20px;
+  box-shadow: 0 2px #F6F6F6;
+}
+
+.customer-img{
+  border-radius: 50%;
+  //border: 1px solid #ddd;
+  //padding: 5px;
+  max-width: 100%;
+  height: auto;
+}
+
+.customer-info{
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-between;
+  align-content: center;
+  margin: 0 0 0 35px;
+}
+
+.row-1{
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+}
+
+.row-1 .customer-name{
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #3679DD;
+}
+
+.row-1 .customer-rating{
+  align-self: center;
+}
+
+.row-2{
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-start;
+}
+
+.row-2 .customer-metric{
+  color: #A7A7A7;
+  margin: 0 25px 0 0;
+}
+
+.row-2 .customer-metric span{
+  color: #000;
+  font-weight: bold;
+}
+
+.row-3{
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+}
+
+.row-3 .customer-trait{
+  font-size: 0.75rem;
+  color: #7B955F;
+}
+
+.row-3 .divider{
+  border-right: 1px solid #979797;
+  //height: 40px;
+}
+
+
 
 
 /* Main Section */
@@ -72,14 +187,24 @@ header img{
   grid-area: main-section;
 }
 
+/* ----------------- */
+/* -- Right Panel -- */
+/* ----------------- */
 
-/* Right Panel */
 .right-panel{
   grid-area: right-panel;
+  width: 60px;
+  height: 100%;
+  background: #ECECEC;
+  box-shadow: -6px 0px 4px #F6F6F6;
+
 }
 
-
-/* Footer */
+/* ------------ */
+/* -- Footer -- */
+/* ------------ */
 .footer{
   grid-area: footer;
+  height: 60px;
+  background: #F8F8F8;
 }
