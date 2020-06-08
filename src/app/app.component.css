@@ -181,10 +181,45 @@ header img{
 
 
 
+/* ------------------ */
+/* -- Main Section -- */
+/* ------------------ */
 
-/* Main Section */
 .main-section{
   grid-area: main-section;
+}
+
+.customer-title{
+  display: grid;
+  grid-template-columns: 140px 1fr;
+  padding: 30px 30px 20px 50px;
+  margin: 0 0 0 0;
+}
+
+.main-section .customer-info{
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-evenly;
+}
+
+.customer-title .customer-name{
+  font-size: 2rem;
+  color: #000;
+}
+
+.customer-title .customer-rating mat-icon{
+  font-size: 2rem;
+  margin: 0 2.5px 0 2.5px;
+}
+
+.customer-title .customer-metric{
+  font-size: 1.5rem;
+}
+
+.customer-title-separator{
+  border-bottom: 4px solid #979797;
+  margin: 0 50px 70px 50px;
+  box-shadow: 0 2px #F6F6F6;
 }
 
 /* ----------------- */
