@@ -50,10 +50,13 @@ header .user-settings{
   align-self: center;
   margin: 0 40px 0 0;
   cursor: pointer;
+  height: 40px;
+  width: 40px;
+  font-size: 40px;
+  cursor: pointer;
 }
 
 header .user-settings mat-icon{
-  font-size: 2.5rem;
 }
 
 
@@ -207,9 +210,14 @@ header img{
   color: #000;
 }
 
+.customer-title .customer-rating{
+  height: 38px;
+}
+
 .customer-title .customer-rating mat-icon{
-  font-size: 2rem;
-  margin: 0 2.5px 0 2.5px;
+  width: 38px;
+  height: 38px;
+  font-size: 38px;
 }
 
 .customer-title .customer-metric{
@@ -239,6 +247,9 @@ header img{
 .selector-option{
   align-self: center;
   cursor: pointer;
+  width: 35px;
+  height: 35px;
+  font-size: 35px
 }
 
 .selector-divider{
