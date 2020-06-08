@@ -1,0 +1,11 @@
+/* ----------------- */
+/* -- Right Panel -- */
+/* ----------------- */
+
+.right-panel{
+  width: 60px;
+  height: 100%;
+  background: #ECECEC;
+  box-shadow: -6px 0px 4px #F6F6F6;
+
+}

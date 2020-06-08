@@ -11,281 +11,40 @@
   height: 100%;
 }
 
-/* ------------ */
-/* -- Header -- */
-/* ------------ */
-
-header{
+app-header{
   grid-area: header;
-  background-color: #F6F6F6;
-  border: 1px solid #979797;
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: space-between;
-  align-content: center;
-  box-shadow: 0 6px 4px #CBCBCB;
+  z-index: 1;
 }
 
-header .seperator{
-  min-width: 200px;
-  flex: 1 0 auto;
-}
-
-header a{
-  font-size: 1.5rem;
-  text-decoration: none;
-  color: #848484;
-  align-self: center;
-  margin: 0 40px 0 0;
-}
-
-header .user-name{
-  font-size: 1.5rem;
-  align-self: center;
-  margin: 0 20px 0 0;
-  cursor: pointer;
-}
-
-header .user-settings{
-  align-self: center;
-  margin: 0 40px 0 0;
-  cursor: pointer;
-  height: 40px;
-  width: 40px;
-  font-size: 40px;
-  cursor: pointer;
-}
-
-header .user-settings mat-icon{
-}
-
-
-header img{
-  width: 130px;
-  margin: 0 40px 0 10px;
-}
 
 /* ---------------- */
 /* -- Left Panel -- */
 /* ---------------- */
 
-.left-panel{
+app-left-panel{
   grid-area: left-panel;
-  box-shadow: 0 0px 4px #CBCBCB;
-  height: 100%;
 }
-
-/* Left Panel Tabs */
-.left-panel-tabs{
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: space-between;
-  align-content: center;
-  padding: 20px 20px 10px 30px;
-}
-
-.tab-option{
-  align-self: center;
-}
-
-.tab-divider{
-  border-right: 2px solid #979797;
-  height: 40px;
-}
-
-.tabs-separator{
-  border-bottom: 3px solid #979797;
-  margin: 0 10px 20px 20px;
-  box-shadow: 0 6px #F6F6F6;
-}
-
-/* Left Panel list item */
-.left-panel-list-item{
-  display: grid;
-  grid-template-columns: 80px 1fr;
-  padding: 5px 20px 10px 30px;
-  margin: 0 0 10px 0;
-}
-
-.left-panel-list{
-  height: 590px;
-  overflow-y: auto;
-}
-
-.list-item-separator{
-  border-bottom: 1px solid #979797;
-  margin: 0 10px 20px 20px;
-  box-shadow: 0 2px #F6F6F6;
-}
-
-.customer-img{
-  border-radius: 50%;
-  //border: 1px solid #ddd;
-  //padding: 5px;
-  max-width: 100%;
-  height: auto;
-}
-
-.customer-info{
-  display: flex;
-  flex-flow: column nowrap;
-  justify-content: space-between;
-  align-content: center;
-  margin: 0 0 0 35px;
-}
-
-.row-1{
-  display: flex;
-  flex-flow: row nowrap;
-  justify-content: space-between;
-}
-
-.row-1 .customer-name{
-  font-size: 1.5rem;
-  font-weight: bold;
-  color: #3679DD;
-}
-
-.row-1 .customer-rating{
-  align-self: center;
-}
-
-.row-2{
-  display: flex;
-  flex-flow: row nowrap;
-  justify-content: flex-start;
-}
-
-.row-2 .customer-metric{
-  color: #A7A7A7;
-  margin: 0 25px 0 0;
-}
-
-.row-2 .customer-metric span{
-  color: #000;
-  font-weight: bold;
-}
-
-.row-3{
-  display: flex;
-  flex-flow: row nowrap;
-  justify-content: space-between;
-}
-
-.row-3 .customer-trait{
-  font-size: 0.75rem;
-  color: #7B955F;
-}
-
-.row-3 .divider{
-  border-right: 1px solid #979797;
-  //height: 40px;
-}
-
 
 
 /* ------------------ */
 /* -- Main Section -- */
 /* ------------------ */
-
-.main-section{
+app-customers{
   grid-area: main-section;
 }
-
-.customer-title{
-  display: grid;
-  grid-template-columns: 140px 1fr;
-  padding: 30px 50px 0 50px;
-  margin: 0 0 0 0;
-}
-
-.main-section .customer-info{
-  display: flex;
-  flex-flow: column nowrap;
-  justify-content: space-evenly;
-}
-
-.customer-title .customer-name{
-  font-size: 2rem;
-  color: #000;
-}
-
-.customer-title .customer-rating{
-  height: 38px;
-}
-
-.customer-title .customer-rating mat-icon{
-  width: 38px;
-  height: 38px;
-  font-size: 38px;
-}
-
-.customer-title .customer-metric{
-  font-size: 1.5rem;
-}
-
-.main-overlay-grid{
-  display: grid;
-  padding: 0 50px 0 50px;
-  grid-template-columns: 9fr 200px 2fr;
-}
-
-.overlay-selector{
-  grid-column: 2 / span 1;
-  grid-row: 1 / span 2;
-  width: 200px;
-  height: 40px;
-  background: #fff;
-  border: solid 1px #000;
-  box-shadow: 2px 4px 4px #979797;
-  display: flex;
-  flex-flow: row nowrap;
-  justify-content: space-between;
-  align-content: center;
-}
-
-.selector-option{
-  align-self: center;
-  cursor: pointer;
-  width: 35px;
-  height: 35px;
-  font-size: 35px
-}
-
-.selector-divider{
-  border-right: solid 1px #979797;
-  margin: 5px 0 5px 0;
-}
-
-.customer-title-separator{
-  grid-column: 1 / span 3;
-  grid-row: 1;
-  border-bottom: 4px solid #979797;
-  margin: 20px 0 20px 0;
-  box-shadow: 0 2px #F6F6F6;
-}
-
-
-
-
 
 /* ----------------- */
 /* -- Right Panel -- */
 /* ----------------- */
 
-.right-panel{
+app-right-panel{
   grid-area: right-panel;
-  width: 60px;
-  height: 100%;
-  background: #ECECEC;
-  box-shadow: -6px 0px 4px #F6F6F6;
-
 }
 
 /* ------------ */
 /* -- Footer -- */
 /* ------------ */
-.footer{
+app-footer{
   grid-area: footer;
   height: 60px;
   background: #F8F8F8;

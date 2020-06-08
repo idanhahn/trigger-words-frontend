@@ -1,0 +1,50 @@
+/* ------------ */
+/* -- Header -- */
+/* ------------ */
+
+header{
+  grid-area: header;
+  background-color: #F6F6F6;
+  border: 1px solid #979797;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-content: center;
+  box-shadow: 0 6px 4px #CBCBCB;
+  height: 70px;
+}
+
+header .seperator{
+  min-width: 200px;
+  flex: 1 0 auto;
+}
+
+header a{
+  font-size: 1.5rem;
+  text-decoration: none;
+  color: #848484;
+  align-self: center;
+  margin: 0 40px 0 0;
+}
+
+header .user-name{
+  font-size: 1.5rem;
+  align-self: center;
+  margin: 0 20px 0 0;
+  cursor: pointer;
+}
+
+header .user-settings{
+  align-self: center;
+  margin: 0 40px 0 0;
+  cursor: pointer;
+  height: 40px;
+  width: 40px;
+  font-size: 40px;
+  cursor: pointer;
+}
+
+header img{
+  width: 130px;
+  margin: 0 40px 0 10px;
+}
