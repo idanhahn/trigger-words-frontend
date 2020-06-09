@@ -61,7 +61,7 @@ export const CUSTOMERS = {
   tlannister: {
     firstName: 'Tyrion',
     lastName: 'Lannister',
-    rating: 4,
+    rating: 2.5,
     img: '../assets/img/dev/avatar_male.png',
     email: 'tyrionlannister@email.com',
     phone: '(605) 234 1234',
@@ -118,7 +118,7 @@ export const CUSTOMERS = {
   dtargaryen: {
     firstName: 'Daenery',
     lastName: 'Targaryen',
-    rating: 4,
+    rating: 3,
     img: '../assets/img/dev/avatar_female.png',
     email: 'daenerytargaryen@email.com',
     phone: '(605) 234 1234',
@@ -175,7 +175,7 @@ export const CUSTOMERS = {
   hpotter: {
     firstName: 'Harry',
     lastName: 'Potter',
-    rating: 4,
+    rating: 4.5,
     img: '../assets/img/dev/avatar_male.png',
     email: 'harrypotter@email.com',
     phone: '(605) 234 1234',
@@ -232,7 +232,7 @@ export const CUSTOMERS = {
   hgranger: {
     firstName: 'Hermione',
     lastName: 'Granger',
-    rating: 4,
+    rating: 1.5,
     img: '../assets/img/dev/avatar_female.png',
     email: 'hermionegranger@email.com',
     phone: '(605) 234 1234',
@@ -289,7 +289,7 @@ export const CUSTOMERS = {
   clannister: {
     firstName: 'Cersei',
     lastName: 'Lannister',
-    rating: 4,
+    rating: 0,
     img: '../assets/img/dev/avatar_female.png',
     email: 'cerseilannister@email.com',
     phone: '(605) 234 1234',

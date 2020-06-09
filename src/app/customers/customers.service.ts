@@ -13,8 +13,9 @@ export class CustomersService {
   getCustomers() {
     return of(CUSTOMERS).pipe(
       map(res => {
-        let customers = Object.values(res);
-        customers.forEach(adjustCustomer);
+
+        let obj = Object.entries(res);
+        let customers = obj.map(adjustCustomer);
         return customers;
       }),
       delay(3000)
@@ -23,8 +24,16 @@ export class CustomersService {
 }
 
 function adjustCustomer(obj) {
+
+  let customer = obj[1];
+
+  // extract id
+  customer.id = obj[0];
+
   // assign number of chats
-  obj.numOfChats = +Object.keys(obj.chats).length;
+  customer.numOfChats = +Object.keys(obj[1].chats).length;
   // assign number of feedback
-  obj.numOfFeedback = +Object.keys(obj.feedback).length;
+  customer.numOfFeedback = +Object.keys(obj[1].feedback).length;
+
+  return customer;
 };
