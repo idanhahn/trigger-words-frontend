@@ -14,6 +14,8 @@ import { LeftPanelComponent } from './left-panel/left-panel.component';
 import { CustomerDetailAiComponent } from './customer-detail-ai/customer-detail-ai.component';
 import { CustomerDetailDataComponent } from './customer-detail-data/customer-detail-data.component';
 import { CustomerDetailChartsComponent } from './customer-detail-charts/customer-detail-charts.component';
+import { CustomersListComponent } from './customers-list/customers-list.component';
+import { CustomersListItemComponent } from './customers-list-item/customers-list-item.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +28,9 @@ import { CustomerDetailChartsComponent } from './customer-detail-charts/customer
     LeftPanelComponent,
     CustomerDetailAiComponent,
     CustomerDetailDataComponent,
-    CustomerDetailChartsComponent
+    CustomerDetailChartsComponent,
+    CustomersListComponent,
+    CustomersListItemComponent
   ],
   imports: [
     BrowserModule,

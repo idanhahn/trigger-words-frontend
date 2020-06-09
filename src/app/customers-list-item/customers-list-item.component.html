@@ -1,0 +1,33 @@
+<!-- customer list item -->
+<div class="left-panel-list-item">
+  <img src="{{customer.img}}" alt="" class="customer-img">
+  <div class="customer-info">
+    <div class="row-1">
+      <div class="customer-name">{{customer.firstName}} {{customer.lastName}}</div>
+      <div class="customer-rating">
+        <mat-icon aria-hidden="false" aria-label="Settings">star</mat-icon>
+        <mat-icon aria-hidden="false" aria-label="Settings">star</mat-icon>
+        <mat-icon aria-hidden="false" aria-label="Settings">star</mat-icon>
+        <mat-icon aria-hidden="false" aria-label="Settings">star_half</mat-icon>
+        <mat-icon aria-hidden="false" aria-label="Settings">star_outline</mat-icon>
+      </div>
+    </div>
+    <div class="row-2">
+      <div class="customer-metric">
+        Chats: <span class="customer-metric-value">{{customer.numOfChats}}</span>
+      </div>
+      <div class="customer-metric">
+        Feedbacks: <span class="customer-metric-value">{{customer.numOfChats}}</span>
+      </div>
+    </div>
+    <div class="row-3">
+      <a class="customer-trait">{{customer.personalTraits['1']}}</a>
+      <div class="divider"></div>
+      <a class="customer-trait">{{customer.personalTraits['2']}}</a>
+      <div class="divider"></div>
+      <a class="customer-trait">{{customer.personalTraits['3']}}</a>
+      <div class="row-3-aligner"></div>
+    </div>
+  </div>
+</div>
+<div class="list-item-separator"></div>

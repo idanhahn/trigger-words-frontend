@@ -1,43 +1,9 @@
-.left-panel{
-  box-shadow: 0 0px 4px #CBCBCB;
-  height: 100%;
-}
-
-/* Left Panel Tabs */
-.left-panel-tabs{
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: space-between;
-  align-content: center;
-  padding: 20px 20px 10px 30px;
-}
-
-.tab-option{
-  align-self: center;
-}
-
-.tab-divider{
-  border-right: 2px solid #979797;
-  height: 40px;
-}
-
-.tabs-separator{
-  border-bottom: 3px solid #979797;
-  margin: 0 10px 20px 20px;
-  box-shadow: 0 6px #F6F6F6;
-}
-
 /* Left Panel list item */
 .left-panel-list-item{
   display: grid;
   grid-template-columns: 80px 1fr;
   padding: 5px 20px 10px 30px;
   margin: 0 0 10px 0;
-}
-
-.left-panel-list{
-  height: 560px;
-  overflow-y: auto;
 }
 
 .list-item-separator{
@@ -67,7 +33,7 @@
 }
 
 .row-1 .customer-name{
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   font-weight: bold;
   color: #3679DD;
 }
@@ -108,12 +74,3 @@
 //height: 40px;
 }
 
-/* Rules for 27 inch screen */
-
-@media screen and (min-height: 900px){
-
-  .left-panel-list{
-    height: 740px;
-  }
-
-}

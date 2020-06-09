@@ -1,0 +1,21 @@
+<section class="left-panel">
+  <!-- Left Panel Tabs -->
+  <div class="left-panel-tabs">
+    <div class="tab-aligner"></div>
+    <a class="tab-option">OPTION A</a>
+    <div class="tab-divider"></div>
+    <a class="tab-option">OPTION B</a>
+    <div class="tab-divider"></div>
+    <a class="tab-option">OPTION C</a>
+    <div class="tab-aligner"></div>
+  </div>
+  <div class="tabs-separator"></div>
+
+  <!-- Left Panel List -->
+  <div class="left-panel-list">
+
+    <app-customers-list-item *ngFor="let customer of customers" [customer]="customer"></app-customers-list-item>
+
+  </div>
+</section>
+
