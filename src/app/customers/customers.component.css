@@ -1,5 +1,16 @@
 
 .main-section{
+  display: grid;
+  grid-template-columns: 480px 1fr;
+  grid-template-areas: "left-panel main-customer-details";
+}
+
+app-left-panel{
+  grid-area: left-panel;
+}
+
+.main-customer-details{
+  grid-area: main-customer-details;
 }
 
 .customer-title{
@@ -91,7 +102,8 @@
   cursor: pointer;
   width: 35px;
   height: 35px;
-  font-size: 35px
+  font-size: 35px;
+  outline: 0;
 }
 
 .selector-divider{

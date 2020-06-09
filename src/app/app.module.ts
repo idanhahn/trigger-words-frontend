@@ -11,6 +11,9 @@ import { FooterComponent } from './footer/footer.component';
 import { ListItemComponent } from './list-item/list-item.component';
 import { CustomersComponent } from './customers/customers.component';
 import { LeftPanelComponent } from './left-panel/left-panel.component';
+import { CustomerDetailAiComponent } from './customer-detail-ai/customer-detail-ai.component';
+import { CustomerDetailDataComponent } from './customer-detail-data/customer-detail-data.component';
+import { CustomerDetailChartsComponent } from './customer-detail-charts/customer-detail-charts.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +23,10 @@ import { LeftPanelComponent } from './left-panel/left-panel.component';
     FooterComponent,
     ListItemComponent,
     CustomersComponent,
-    LeftPanelComponent
+    LeftPanelComponent,
+    CustomerDetailAiComponent,
+    CustomerDetailDataComponent,
+    CustomerDetailChartsComponent
   ],
   imports: [
     BrowserModule,
