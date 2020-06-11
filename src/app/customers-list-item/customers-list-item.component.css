@@ -4,6 +4,8 @@
   grid-template-columns: 80px 1fr;
   padding: 5px 20px 10px 30px;
   margin: 0 0 10px 0;
+  outline: 0;
+  cursor: pointer;
 }
 
 .list-item-separator{
@@ -117,4 +119,3 @@
   border-right: 1px solid #979797;
 //height: 40px;
 }
-

@@ -10,27 +10,29 @@ const routes: Routes = [
     component: CustomersComponent,
     children: [
       {
-        path: 'ai',
+        path: ':id/ai',
         component: CustomerDetailAiComponent
       },
       {
-        path: 'data',
+        path: ':id/data',
         component: CustomerDetailDataComponent
       },
       {
-        path: 'charts',
+        path: ':id/charts',
         component: CustomerDetailChartsComponent
       },
+      // TODO: Change to default unselected
       {
         path: '',
-        redirectTo: 'ai',
+        redirectTo: 'jsnow/ai',
         pathMatch: 'full'
       }
     ]
   },
   //{path: 'main-second', component: MainSecondComponent},
   //{path: 'main-third', component: MainThirdComponent},
-  {path: '', redirectTo: '/customers/ai', pathMatch: 'full'}
+  // TODO: Change to default unselected
+  {path: '', redirectTo: '/customers/jsnow/ai', pathMatch: 'full'}
 ];
 
 @NgModule({

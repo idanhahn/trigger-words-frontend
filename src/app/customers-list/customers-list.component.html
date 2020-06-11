@@ -13,9 +13,7 @@
 
   <!-- Left Panel List -->
   <div class="left-panel-list">
-
-    <app-customers-list-item *ngFor="let customer of customers" [customer]="customer"></app-customers-list-item>
-
+    <app-customers-list-item *ngFor="let customer of customers$ | async" [customer]="customer"></app-customers-list-item>
   </div>
 </section>
 

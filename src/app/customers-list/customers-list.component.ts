@@ -1,4 +1,6 @@
 import {Component, Input, OnInit} from '@angular/core';
+import {switchMap} from 'rxjs/operators';
+import {CustomersService} from '../customers/customers.service';
 
 @Component({
   selector: 'app-customers-list',
@@ -7,11 +9,12 @@ import {Component, Input, OnInit} from '@angular/core';
 })
 export class CustomersListComponent implements OnInit {
 
-  @Input() customers;
+  customers$;
 
-  constructor() { }
+  constructor(private customersService: CustomersService) { }
 
   ngOnInit() {
+    this.customers$ = this.customersService.getCustomers();
   }
 
 }

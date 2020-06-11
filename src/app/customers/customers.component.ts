@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {CustomersService} from './customers.service';
+import {ActivatedRoute} from '@angular/router';
+import {switchMap} from 'rxjs/operators';
 
 @Component({
   selector: 'app-customers',
@@ -8,14 +10,16 @@ import {CustomersService} from './customers.service';
 })
 export class CustomersComponent implements OnInit {
 
-  customers;
-  constructor(private customersService: CustomersService) { }
+  customer;
+  constructor(
+    private customersService: CustomersService,
+    private route: ActivatedRoute
+  ) {}
 
   ngOnInit() {
-    this.customersService.getCustomers().subscribe(customers => {
-      console.log(customers);
-      this.customers = customers;
-    });
-  }
 
+    this.route.children[0].params.pipe(
+      switchMap(params => this.customersService.getCustomer(params.id)))
+      .subscribe(customer => this.customer = customer);
+  }
 }

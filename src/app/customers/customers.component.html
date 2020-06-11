@@ -1,31 +1,105 @@
 <section class="main-section">
 
   <!-- Customers right panel list -->
-  <app-customers-list [customers]="customers"></app-customers-list>
+  <app-customers-list></app-customers-list>
 
   <!-- main customer detail section -->
   <section class="main-customer-details">
     <!-- Customer Title -->
     <div class="customer-title">
-      <img src="../assets/img/dev/img_avatar.png" alt="" class="customer-img">
+      <img [src]="customer?.img" alt="" class="customer-img">
       <div class="customer-info">
         <div class="spacer"></div>
         <div class="row-1">
-          <div class="customer-name">First Last</div>
+          <div class="customer-name">{{customer.firstName}} {{customer.lastName}}</div>
+
           <div class="customer-rating">
-            <mat-icon aria-hidden="false" aria-label="Settings">star</mat-icon>
-            <mat-icon aria-hidden="false" aria-label="Settings">star</mat-icon>
-            <mat-icon aria-hidden="false" aria-label="Settings">star</mat-icon>
-            <mat-icon aria-hidden="false" aria-label="Settings">star_half</mat-icon>
-            <mat-icon aria-hidden="false" aria-label="Settings">star_outline</mat-icon>
+            <div *ngIf="customer.rating == 0" class="star-zero">
+              <mat-icon aria-hidden="false" aria-label="Settings">star_outline</mat-icon>
+              <mat-icon aria-hidden="false" aria-label="Settings">star_outline</mat-icon>
+              <mat-icon aria-hidden="false" aria-label="Settings">star_outline</mat-icon>
+              <mat-icon aria-hidden="false" aria-label="Settings">star_outline</mat-icon>
+              <mat-icon aria-hidden="false" aria-label="Settings">star_outline</mat-icon>
+            </div>
+            <div *ngIf="customer.rating == 0.5" class="star-half">
+              <mat-icon aria-hidden="false" aria-label="Settings">star_half</mat-icon>
+              <mat-icon aria-hidden="false" aria-label="Settings">star_outline</mat-icon>
+              <mat-icon aria-hidden="false" aria-label="Settings">star_outline</mat-icon>
+              <mat-icon aria-hidden="false" aria-label="Settings">star_outline</mat-icon>
+              <mat-icon aria-hidden="false" aria-label="Settings">star_outline</mat-icon>
+            </div>
+            <div *ngIf="customer.rating == 1" class="star-one">
+              <mat-icon aria-hidden="false" aria-label="Settings">star</mat-icon>
+              <mat-icon aria-hidden="false" aria-label="Settings">star_outline</mat-icon>
+              <mat-icon aria-hidden="false" aria-label="Settings">star_outline</mat-icon>
+              <mat-icon aria-hidden="false" aria-label="Settings">star_outline</mat-icon>
+              <mat-icon aria-hidden="false" aria-label="Settings">star_outline</mat-icon>
+            </div>
+            <div *ngIf="customer.rating == 1.5" class="star-one-half">
+              <mat-icon aria-hidden="false" aria-label="Settings">star</mat-icon>
+              <mat-icon aria-hidden="false" aria-label="Settings">star_half</mat-icon>
+              <mat-icon aria-hidden="false" aria-label="Settings">star_outline</mat-icon>
+              <mat-icon aria-hidden="false" aria-label="Settings">star_outline</mat-icon>
+              <mat-icon aria-hidden="false" aria-label="Settings">star_outline</mat-icon>
+            </div>
+            <div *ngIf="customer.rating == 2" class="star-two">
+              <mat-icon aria-hidden="false" aria-label="Settings">star</mat-icon>
+              <mat-icon aria-hidden="false" aria-label="Settings">star</mat-icon>
+              <mat-icon aria-hidden="false" aria-label="Settings">star_outline</mat-icon>
+              <mat-icon aria-hidden="false" aria-label="Settings">star_outline</mat-icon>
+              <mat-icon aria-hidden="false" aria-label="Settings">star_outline</mat-icon>
+            </div>
+            <div *ngIf="customer.rating == 2.5" class="star-two-half">
+              <mat-icon aria-hidden="false" aria-label="Settings">star</mat-icon>
+              <mat-icon aria-hidden="false" aria-label="Settings">star</mat-icon>
+              <mat-icon aria-hidden="false" aria-label="Settings">star_half</mat-icon>
+              <mat-icon aria-hidden="false" aria-label="Settings">star_outline</mat-icon>
+              <mat-icon aria-hidden="false" aria-label="Settings">star_outline</mat-icon>
+            </div>
+            <div *ngIf="customer.rating == 3" class="star-three">
+              <mat-icon aria-hidden="false" aria-label="Settings">star</mat-icon>
+              <mat-icon aria-hidden="false" aria-label="Settings">star</mat-icon>
+              <mat-icon aria-hidden="false" aria-label="Settings">star</mat-icon>
+              <mat-icon aria-hidden="false" aria-label="Settings">star_outline</mat-icon>
+              <mat-icon aria-hidden="false" aria-label="Settings">star_outline</mat-icon>
+            </div>
+            <div *ngIf="customer.rating == 3.5" class="star-three-half">
+              <mat-icon aria-hidden="false" aria-label="Settings">star</mat-icon>
+              <mat-icon aria-hidden="false" aria-label="Settings">star</mat-icon>
+              <mat-icon aria-hidden="false" aria-label="Settings">star</mat-icon>
+              <mat-icon aria-hidden="false" aria-label="Settings">star_half</mat-icon>
+              <mat-icon aria-hidden="false" aria-label="Settings">star_outline</mat-icon>
+            </div>
+            <div *ngIf="customer.rating == 4" class="star-four">
+              <mat-icon aria-hidden="false" aria-label="Settings">star</mat-icon>
+              <mat-icon aria-hidden="false" aria-label="Settings">star</mat-icon>
+              <mat-icon aria-hidden="false" aria-label="Settings">star</mat-icon>
+              <mat-icon aria-hidden="false" aria-label="Settings">star</mat-icon>
+              <mat-icon aria-hidden="false" aria-label="Settings">star_outline</mat-icon>
+            </div>
+            <div *ngIf="customer.rating == 4.5" class="star-four-half">
+              <mat-icon aria-hidden="false" aria-label="Settings">star</mat-icon>
+              <mat-icon aria-hidden="false" aria-label="Settings">star</mat-icon>
+              <mat-icon aria-hidden="false" aria-label="Settings">star</mat-icon>
+              <mat-icon aria-hidden="false" aria-label="Settings">star</mat-icon>
+              <mat-icon aria-hidden="false" aria-label="Settings">star_half</mat-icon>
+            </div>
+            <div *ngIf="customer.rating == 5" class="star-five">
+              <mat-icon aria-hidden="false" aria-label="Settings">star</mat-icon>
+              <mat-icon aria-hidden="false" aria-label="Settings">star</mat-icon>
+              <mat-icon aria-hidden="false" aria-label="Settings">star</mat-icon>
+              <mat-icon aria-hidden="false" aria-label="Settings">star</mat-icon>
+              <mat-icon aria-hidden="false" aria-label="Settings">star</mat-icon>
+            </div>
           </div>
+
         </div>
         <div class="row-2">
           <div class="customer-metric">
-            Chats: <span class="customer-metric-value">200</span>
+            Chats: <span class="customer-metric-value">{{customer.numOfChats}}</span>
           </div>
           <div class="customer-metric">
-            Feedbacks: <span class="customer-metric-value">10</span>
+            Feedbacks: <span class="customer-metric-value">{{customer.numOfFeedback}}</span>
           </div>
         </div>
       </div>
@@ -38,11 +112,20 @@
       </div>
       <div class="overlay-selector">
         <div class="selector-aligner"></div>
-        <mat-icon routerLink="./ai" class="selector-option" aria-hidden="false" aria-label="Settings">psychology</mat-icon>
+        <mat-icon
+          [routerLink]="[customer.id, 'ai']"
+          [routerLinkActive]="'selectedDetailOption'"
+          class="selector-option" aria-hidden="false" aria-label="Settings">psychology</mat-icon>
         <div class="selector-divider"></div>
-        <mat-icon routerLink="./data" class="selector-option" aria-hidden="false" aria-label="Settings">list</mat-icon>
+        <mat-icon
+          [routerLink]="[customer.id, 'data']"
+          [routerLinkActive]="'selectedDetailOption'"
+          class="selector-option" aria-hidden="false" aria-label="Settings">list</mat-icon>
         <div class="selector-divider"></div>
-        <mat-icon routerLink="./charts" class="selector-option" aria-hidden="false" aria-label="Settings">show_chart</mat-icon>
+        <mat-icon
+          [routerLink]="[customer.id, 'charts']"
+          [routerLinkActive]="'selectedDetailOption'"
+          class="selector-option" aria-hidden="false" aria-label="Settings">show_chart</mat-icon>
         <div class="selector-aligner"></div>
       </div>
     </div>

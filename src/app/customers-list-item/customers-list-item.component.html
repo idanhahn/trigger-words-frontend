@@ -1,5 +1,7 @@
 <!-- customer list item -->
-<div class="left-panel-list-item">
+<div class="left-panel-list-item"
+     [routerLink]="['/customers',customer.id, 'ai']"
+      [routerLinkActive]="'selectedCustomer'">
   <img src="{{customer.img}}" alt="" class="customer-img">
   <div class="customer-info">
     <div class="row-1">

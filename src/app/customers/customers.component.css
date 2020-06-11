@@ -73,6 +73,50 @@ app-customers-list{
   font-size: 38px;
 }
 
+.star-zero{
+  color: darkred;
+}
+
+.star-half{
+  color: darkred;
+}
+
+.star-one{
+  color: red;
+}
+
+.star-one-half{
+  color: red;
+}
+
+.star-two{
+  color: orangered;
+}
+
+.star-two-half{
+  color: orangered;
+}
+
+.star-three{
+  color: orange;
+}
+
+.star-three-half{
+  color: orange;
+}
+
+.star-four{
+  color: greenyellow;
+}
+
+.star-four-half{
+  color: green;
+}
+
+.star-five{
+  color: green;
+}
+
 .customer-title .customer-metric{
   font-size: 1.5rem;
 }
