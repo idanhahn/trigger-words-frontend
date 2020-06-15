@@ -1,4 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
+import {CustomersService} from '../customers/customers.service';
+import {map, switchMap} from 'rxjs/operators';
+import {ActivatedRoute} from '@angular/router';
 
 @Component({
   selector: 'app-customer-detail-data',
@@ -7,9 +10,24 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CustomerDetailDataComponent implements OnInit {
 
-  constructor() { }
+  chats;
+  constructor(private customersService: CustomersService, private route: ActivatedRoute) { }
 
   ngOnInit() {
+
+    this.route.params.pipe(
+      switchMap(params => this.customersService.getCustomer(params.id)),
+      map(customer => {
+        console.log(customer);
+        const chats = Object.values(customer.chats);
+        console.log(chats);
+        return chats;
+      })
+    )
+      .subscribe(chats => {
+        this.chats = chats;
+        console.log(this.chats);
+      });
   }
 
 }
