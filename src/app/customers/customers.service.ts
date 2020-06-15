@@ -10,20 +10,32 @@ import {environment} from '../../environments/environment';
 export class CustomersService {
 
   loading: BehaviorSubject<any> = new BehaviorSubject(true);
+  doneLoading = false;
 
   constructor() { }
 
   getCustomers() {
     // TODO: consider a single db call
-    return of(CUSTOMERS).pipe(
-      delay(environment.mockDbDelay),
-      map(res => {
-        const customers = Object.entries(res).map(adjustCustomer);
-        console.log('Simulated Customers from DB: ', customers);
-        this.loading.next(false);
-        return customers;
-      })
-    );
+    if (this.doneLoading) {
+      return of(CUSTOMERS).pipe(
+        map(res => {
+          const customers = Object.entries(res).map(adjustCustomer);
+          console.log('Snapshot Simulated Customers from DB: ', customers);
+          return customers;
+        })
+      );
+    } else {
+      return of(CUSTOMERS).pipe(
+        delay(environment.mockLoadingDelay),
+        map(res => {
+          const customers = Object.entries(res).map(adjustCustomer);
+          console.log('Simulated Customers from DB: ', customers);
+          this.loading.next(false);
+          this.doneLoading = true;
+          return customers;
+        })
+      );
+    }
   }
 
   getCustomer(id: string) {

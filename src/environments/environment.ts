@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  mockDbDelay: 5000
+  mockLoadingDelay: 2000
 };
 
 /*

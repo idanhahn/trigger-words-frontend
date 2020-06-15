@@ -1,15 +1,15 @@
 <!-- Loader -->
-<div *ngIf="loading" class="loader" >
+<div  *ngIf="loading" @startAppLoader class="loader" >
   <app-loader></app-loader>
 </div>
 
-<section *ngIf="!loading" class="main-section">
+<section class="main-section">
 
   <!-- Customers right panel list -->
-  <app-customers-list></app-customers-list>
+  <app-customers-list *ngIf="!loading" @startAppList ></app-customers-list>
 
   <!-- main customer detail section -->
-  <section class="main-customer-details">
+  <section *ngIf="!loading" @startAppDetails class="main-customer-details">
     <!-- Customer Title -->
     <div class="customer-title">
       <img [src]="customer.img" alt="" class="customer-img">
