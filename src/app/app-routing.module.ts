@@ -24,7 +24,7 @@ const routes: Routes = [
       // TODO: Change to default unselected
       {
         path: '',
-        redirectTo: 'jsnow/ai',
+        redirectTo: 'jsnow/data',
         pathMatch: 'full'
       }
     ]
@@ -32,7 +32,7 @@ const routes: Routes = [
   //{path: 'main-second', component: MainSecondComponent},
   //{path: 'main-third', component: MainThirdComponent},
   // TODO: Change to default unselected
-  {path: '', redirectTo: '/customers/jsnow/ai', pathMatch: 'full'}
+  {path: '', redirectTo: '/customers/jsnow/data', pathMatch: 'full'}
 ];
 
 @NgModule({
