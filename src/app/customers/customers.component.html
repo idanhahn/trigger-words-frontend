@@ -1,4 +1,9 @@
-<section class="main-section">
+<!-- Loader -->
+<div *ngIf="loading" class="loader" >
+  <app-loader></app-loader>
+</div>
+
+<section *ngIf="!loading" class="main-section">
 
   <!-- Customers right panel list -->
   <app-customers-list></app-customers-list>
@@ -7,7 +12,7 @@
   <section class="main-customer-details">
     <!-- Customer Title -->
     <div class="customer-title">
-      <img [src]="customer?.img" alt="" class="customer-img">
+      <img [src]="customer.img" alt="" class="customer-img">
       <div class="customer-info">
         <div class="spacer"></div>
         <div class="row-1">

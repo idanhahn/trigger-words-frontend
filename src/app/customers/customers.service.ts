@@ -1,24 +1,28 @@
 import { Injectable } from '@angular/core';
-import {of} from 'rxjs';
+import {BehaviorSubject, of} from 'rxjs';
 import {CUSTOMERS} from '../mock-data/mock-customers';
 import {delay, map} from 'rxjs/operators';
+import {environment} from '../../environments/environment';
 
 @Injectable({
   providedIn: 'root'
 })
 export class CustomersService {
 
+  loading: BehaviorSubject<any> = new BehaviorSubject(true);
+
   constructor() { }
 
   getCustomers() {
     // TODO: consider a single db call
     return of(CUSTOMERS).pipe(
+      delay(environment.mockDbDelay),
       map(res => {
         const customers = Object.entries(res).map(adjustCustomer);
         console.log('Simulated Customers from DB: ', customers);
+        this.loading.next(false);
         return customers;
-      }),
-      delay(0)
+      })
     );
   }
 

@@ -16,6 +16,7 @@ import { CustomerDetailDataComponent } from './customer-detail-data/customer-det
 import { CustomerDetailChartsComponent } from './customer-detail-charts/customer-detail-charts.component';
 import { CustomersListComponent } from './customers-list/customers-list.component';
 import { CustomersListItemComponent } from './customers-list-item/customers-list-item.component';
+import { LoaderComponent } from './loader/loader.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { CustomersListItemComponent } from './customers-list-item/customers-list
     CustomerDetailDataComponent,
     CustomerDetailChartsComponent,
     CustomersListComponent,
-    CustomersListItemComponent
+    CustomersListItemComponent,
+    LoaderComponent
   ],
   imports: [
     BrowserModule,
