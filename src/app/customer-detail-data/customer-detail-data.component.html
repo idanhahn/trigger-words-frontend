@@ -1,1 +1,31 @@
-<p>customer-detail-data works!</p>
+<section class="data-container">
+  <div class="table-title">All Chats</div>
+  <div class="table-container">
+    <table class="table-data">
+      <col style="width:15%">
+      <col style="width:15%">
+      <col style="width:15%">
+      <col style="width:65%">
+      <thead>
+      <tr>
+        <th>Conversation ID</th>
+        <th>Time & Date</th>
+        <th>Operator ID</th>
+        <th>Content</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr *ngFor="let chat of chats">
+        <td>{{chat.conversationId}}</td>
+        <td>{{chat.time | date:'dd/MM/yyyy'}}</td>
+        <td>{{chat.operatorId}}</td>
+        <td>
+          <div class="content">
+            {{chat.content}}
+          </div>
+        </td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
