@@ -6,7 +6,8 @@
   <a href="">Chats</a>
   <span class="seperator"></span>
 
-  <span class="user-name">Tess May</span>
-  <mat-icon class="user-settings" aria-hidden="false" aria-label="Settings">person</mat-icon>
+  <!-- TODO: fix need to reload page to get user name bug -->
+  <span class="user-name">{{userName == '' ? 'Tess May' : userName}}</span>
+  <mat-icon (click)="auth.logout()" *ngIf="auth.login()" class="user-settings" aria-hidden="false" aria-label="Settings">person</mat-icon>
 
 </header>

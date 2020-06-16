@@ -4,10 +4,12 @@ import {CustomersComponent} from './customers/customers.component';
 import {CustomerDetailAiComponent} from './customer-detail-ai/customer-detail-ai.component';
 import {CustomerDetailDataComponent} from './customer-detail-data/customer-detail-data.component';
 import {CustomerDetailChartsComponent} from './customer-detail-charts/customer-detail-charts.component';
+import {AuthGuard} from './auth/auth.guard';
 
 const routes: Routes = [
   { path: 'customers',
     component: CustomersComponent,
+    canActivate: [AuthGuard],
     children: [
       {
         path: ':id/ai',
