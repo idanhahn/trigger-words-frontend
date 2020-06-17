@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "feedback-frontend-1447b": {
+      "hosting": {
+        "feedbacks-frontend": [
+          "feedback-frontend-1447b"
+        ]
+      }
+    }
+  }
+}

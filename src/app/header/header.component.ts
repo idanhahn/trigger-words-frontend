@@ -25,7 +25,7 @@ export class HeaderComponent implements OnInit, AfterViewInit {
         // TODO: fix need to reload page to get user name bug
         /*
         else {
-          console.log("no user data recieved");
+          console.log("no user data received");
         }
         */
       }

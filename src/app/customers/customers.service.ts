@@ -1,8 +1,9 @@
 import { Injectable } from '@angular/core';
-import {BehaviorSubject, of} from 'rxjs';
+import {BehaviorSubject, Observable, of} from 'rxjs';
 import {CUSTOMERS} from '../mock-data/mock-customers';
 import {delay, map} from 'rxjs/operators';
 import {environment} from '../../environments/environment';
+import {AngularFireDatabase} from '@angular/fire/database';
 
 @Injectable({
   providedIn: 'root'
@@ -12,29 +13,55 @@ export class CustomersService {
   loading: BehaviorSubject<any> = new BehaviorSubject(true);
   doneLoading = false;
 
-  constructor() { }
 
-  getCustomers() {
-    // TODO: consider a single db call
-    if (this.doneLoading) {
-      return of(CUSTOMERS).pipe(
-        map(res => {
-          const customers = Object.entries(res).map(adjustCustomer);
-          console.log('Snapshot Simulated Customers from DB: ', customers);
-          return customers;
-        })
-      );
+  constructor(private fireDatabase: AngularFireDatabase) { }
+
+  // TODO: combine duplicate code
+  getCustomers(): Observable<any> {
+
+    if (environment.useMockDB) {
+      // TODO: consider a single db call
+      if (this.doneLoading) {
+        return of(CUSTOMERS).pipe(
+          map(res => {
+            const customers = Object.entries(res).map(adjustCustomer);
+            console.log('Snapshot Simulated Customers from DB: ', customers);
+            return customers;
+          })
+        );
+      } else {
+        return of(CUSTOMERS).pipe(
+          delay(environment.mockLoadingDelay),
+          map(res => {
+            const customers = Object.entries(res).map(adjustCustomer);
+            console.log('Simulated Customers from DB: ', customers);
+            this.loading.next(false);
+            this.doneLoading = true;
+            return customers;
+          })
+        );
+      }
     } else {
-      return of(CUSTOMERS).pipe(
-        delay(environment.mockLoadingDelay),
-        map(res => {
-          const customers = Object.entries(res).map(adjustCustomer);
-          console.log('Simulated Customers from DB: ', customers);
-          this.loading.next(false);
-          this.doneLoading = true;
-          return customers;
-        })
-      );
+      if (this.doneLoading) {
+        return this.fireDatabase.object('customers').valueChanges().pipe(
+          map(res => {
+            const customers = Object.entries(res).map(adjustCustomer);
+            console.log('Live Customers from DB: ', customers);
+            return customers;
+          })
+        );
+      } else {
+        return this.fireDatabase.object('customers').valueChanges().pipe(
+          delay(environment.mockLoadingDelay),
+          map(res => {
+            const customers = Object.entries(res).map(adjustCustomer);
+            console.log('Live Customers from DB: ', customers);
+            this.loading.next(false);
+            this.doneLoading = true;
+            return customers;
+          })
+        );
+      }
     }
   }
 

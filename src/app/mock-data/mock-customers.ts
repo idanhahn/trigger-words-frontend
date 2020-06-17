@@ -9,6 +9,12 @@ export const CUSTOMERS = {
     email: 'jhonshow@email.com',
     phone: '(605) 234 1234',
     chats: {
+      0: {
+        conversationId: '3FD12',
+        time: 123456789,
+        operatorId: 'OPERATOR#',
+        content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum volutpat egestas mi, a convallis felis laoreet sit amet. Integer augue.'
+      },
       1: {
         conversationId: '3FD12',
         time: 123456789,
@@ -83,6 +89,14 @@ export const CUSTOMERS = {
       }
     },
     feedback: {
+      0: {
+        feedbackId: 'AAAAA',
+        rating: 3,
+        time: 123456789,
+        content: {
+          msg: 'luram ipsum'
+        }
+      },
       1: {
         feedbackId: 'AAAAA',
         rating: 3,
@@ -101,9 +115,9 @@ export const CUSTOMERS = {
       }
     },
     personalTraits: {
-      1: 'Early Adapter',
-      2: 'Quick Responder',
-      3: 'Formal Ton'
+      0: 'Early Adapter',
+      1: 'Quick Responder',
+      2: 'Formal Ton'
     },
     ai: {
       data: 'data'
@@ -120,6 +134,12 @@ export const CUSTOMERS = {
     email: 'tyrionlannister@email.com',
     phone: '(605) 234 1234',
     chats: {
+      0: {
+        conversationId: '3FD12',
+        time: 123456789,
+        operatorId: 'OPERATOR#',
+        content: 'luram ipsum'
+      },
       1: {
         conversationId: '3FD12',
         time: 123456789,
@@ -127,12 +147,6 @@ export const CUSTOMERS = {
         content: 'luram ipsum'
       },
       2: {
-        conversationId: '3FD12',
-        time: 123456789,
-        operatorId: 'OPERATOR#',
-        content: 'luram ipsum'
-      },
-      3: {
         conversationId: '3FD12',
         time: 123456789,
         operatorId: 'OPERATOR#',
@@ -140,7 +154,7 @@ export const CUSTOMERS = {
       }
     },
     feedback: {
-      1: {
+      0: {
         feedbackId: 'AAAAA',
         rating: 3,
         time: 123456789,
@@ -148,7 +162,7 @@ export const CUSTOMERS = {
           msg: 'luram ipsum'
         }
       },
-      2: {
+      1: {
         feedbackId: 'AAAAA',
         rating: 3,
         time: 123456789,
@@ -158,9 +172,9 @@ export const CUSTOMERS = {
       }
     },
     personalTraits: {
-      1: 'Early Adapter',
-      2: 'Quick Responder',
-      3: 'Formal Ton'
+      0: 'Early Adapter',
+      1: 'Quick Responder',
+      2: 'Formal Ton'
     },
     ai: {
       data: 'data'
@@ -177,6 +191,12 @@ export const CUSTOMERS = {
     email: 'daenerytargaryen@email.com',
     phone: '(605) 234 1234',
     chats: {
+      0: {
+        conversationId: '3FD12',
+        time: 123456789,
+        operatorId: 'OPERATOR#',
+        content: 'luram ipsum'
+      },
       1: {
         conversationId: '3FD12',
         time: 123456789,
@@ -184,12 +204,6 @@ export const CUSTOMERS = {
         content: 'luram ipsum'
       },
       2: {
-        conversationId: '3FD12',
-        time: 123456789,
-        operatorId: 'OPERATOR#',
-        content: 'luram ipsum'
-      },
-      3: {
         conversationId: '3FD12',
         time: 123456789,
         operatorId: 'OPERATOR#',
@@ -197,7 +211,7 @@ export const CUSTOMERS = {
       }
     },
     feedback: {
-      1: {
+      0: {
         feedbackId: 'AAAAA',
         rating: 3,
         time: 123456789,
@@ -205,7 +219,7 @@ export const CUSTOMERS = {
           msg: 'luram ipsum'
         }
       },
-      2: {
+      1: {
         feedbackId: 'AAAAA',
         rating: 3,
         time: 123456789,
@@ -215,9 +229,9 @@ export const CUSTOMERS = {
       }
     },
     personalTraits: {
-      1: 'Early Adapter',
-      2: 'Quick Responder',
-      3: 'Formal Ton'
+      0: 'Early Adapter',
+      1: 'Quick Responder',
+      2: 'Formal Ton'
     },
     ai: {
       data: 'data'
@@ -234,6 +248,12 @@ export const CUSTOMERS = {
     email: 'harrypotter@email.com',
     phone: '(605) 234 1234',
     chats: {
+      0: {
+        conversationId: '3FD12',
+        time: 123456789,
+        operatorId: 'OPERATOR#',
+        content: 'luram ipsum'
+      },
       1: {
         conversationId: '3FD12',
         time: 123456789,
@@ -241,12 +261,6 @@ export const CUSTOMERS = {
         content: 'luram ipsum'
       },
       2: {
-        conversationId: '3FD12',
-        time: 123456789,
-        operatorId: 'OPERATOR#',
-        content: 'luram ipsum'
-      },
-      3: {
         conversationId: '3FD12',
         time: 123456789,
         operatorId: 'OPERATOR#',
@@ -254,7 +268,7 @@ export const CUSTOMERS = {
       }
     },
     feedback: {
-      1: {
+      0: {
         feedbackId: 'AAAAA',
         rating: 3,
         time: 123456789,
@@ -262,7 +276,7 @@ export const CUSTOMERS = {
           msg: 'luram ipsum'
         }
       },
-      2: {
+      1: {
         feedbackId: 'AAAAA',
         rating: 3,
         time: 123456789,
@@ -272,9 +286,9 @@ export const CUSTOMERS = {
       }
     },
     personalTraits: {
-      1: 'Early Adapter',
-      2: 'Quick Responder',
-      3: 'Formal Ton'
+      0: 'Early Adapter',
+      1: 'Quick Responder',
+      2: 'Formal Ton'
     },
     ai: {
       data: 'data'
@@ -291,6 +305,12 @@ export const CUSTOMERS = {
     email: 'hermionegranger@email.com',
     phone: '(605) 234 1234',
     chats: {
+      0: {
+        conversationId: '3FD12',
+        time: 123456789,
+        operatorId: 'OPERATOR#',
+        content: 'luram ipsum'
+      },
       1: {
         conversationId: '3FD12',
         time: 123456789,
@@ -298,12 +318,6 @@ export const CUSTOMERS = {
         content: 'luram ipsum'
       },
       2: {
-        conversationId: '3FD12',
-        time: 123456789,
-        operatorId: 'OPERATOR#',
-        content: 'luram ipsum'
-      },
-      3: {
         conversationId: '3FD12',
         time: 123456789,
         operatorId: 'OPERATOR#',
@@ -311,7 +325,7 @@ export const CUSTOMERS = {
       }
     },
     feedback: {
-      1: {
+      0: {
         feedbackId: 'AAAAA',
         rating: 3,
         time: 123456789,
@@ -319,7 +333,7 @@ export const CUSTOMERS = {
           msg: 'luram ipsum'
         }
       },
-      2: {
+      1: {
         feedbackId: 'AAAAA',
         rating: 3,
         time: 123456789,
@@ -329,9 +343,9 @@ export const CUSTOMERS = {
       }
     },
     personalTraits: {
-      1: 'Early Adapter',
-      2: 'Quick Responder',
-      3: 'Formal Ton'
+      0: 'Early Adapter',
+      1: 'Quick Responder',
+      2: 'Formal Ton'
     },
     ai: {
       data: 'data'
@@ -348,6 +362,12 @@ export const CUSTOMERS = {
     email: 'cerseilannister@email.com',
     phone: '(605) 234 1234',
     chats: {
+      0: {
+        conversationId: '3FD12',
+        time: 123456789,
+        operatorId: 'OPERATOR#',
+        content: 'luram ipsum'
+      },
       1: {
         conversationId: '3FD12',
         time: 123456789,
@@ -355,12 +375,6 @@ export const CUSTOMERS = {
         content: 'luram ipsum'
       },
       2: {
-        conversationId: '3FD12',
-        time: 123456789,
-        operatorId: 'OPERATOR#',
-        content: 'luram ipsum'
-      },
-      3: {
         conversationId: '3FD12',
         time: 123456789,
         operatorId: 'OPERATOR#',
@@ -368,7 +382,7 @@ export const CUSTOMERS = {
       }
     },
     feedback: {
-      1: {
+      0: {
         feedbackId: 'AAAAA',
         rating: 3,
         time: 123456789,
@@ -376,7 +390,7 @@ export const CUSTOMERS = {
           msg: 'luram ipsum'
         }
       },
-      2: {
+      1: {
         feedbackId: 'AAAAA',
         rating: 3,
         time: 123456789,
@@ -386,9 +400,9 @@ export const CUSTOMERS = {
       }
     },
     personalTraits: {
-      1: 'Early Adapter',
-      2: 'Quick Responder',
-      3: 'Formal Ton'
+      0: 'Early Adapter',
+      1: 'Quick Responder',
+      2: 'Formal Ton'
     },
     ai: {
       data: 'data'
