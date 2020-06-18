@@ -10,7 +10,7 @@ export const CUSTOMERS = {
     phone: '(605) 234 1234',
     chats: {
       0: {
-        conversationId: '3FD12',
+        conversationId: '3FD12A',
         time: 123456789,
         operatorId: 'OPERATOR#',
         content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum volutpat egestas mi, a convallis felis laoreet sit amet. Integer augue.'

@@ -19,7 +19,7 @@ import { CustomersListItemComponent } from './customers-list-item/customers-list
 import { LoaderComponent } from './loader/loader.component';
 import { AngularFireModule } from '@angular/fire';
 import { environment } from '../environments/environment';
-import { AngularFireDatabaseModule} from '@angular/fire/database';
+import { AngularFirestoreModule } from '@angular/fire/firestore';
 
 @NgModule({
   declarations: [
@@ -43,7 +43,7 @@ import { AngularFireDatabaseModule} from '@angular/fire/database';
     BrowserAnimationsModule,
     MatIconModule,
     AngularFireModule.initializeApp(environment.firebase),
-    AngularFireDatabaseModule
+    AngularFirestoreModule
   ],
   providers: [],
   bootstrap: [AppComponent]

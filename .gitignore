@@ -44,3 +44,9 @@ testem.log
 # System Files
 .DS_Store
 Thumbs.db
+
+# helpers
+
+# firestore_loader
+helpers/*/.idea
+feedback-frontend-1447b-ab7db3dc025f.json

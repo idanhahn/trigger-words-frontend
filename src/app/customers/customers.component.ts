@@ -24,8 +24,8 @@ import {animate, style, transition, trigger} from '@angular/animations';
     ]),
     // Detail Panel Animation:
     // -----------------------
-    trigger('startAppDetails',[
-      transition(':enter',[
+    trigger('startAppDetails', [
+      transition(':enter', [
         style({
           opacity: 0
         }),
@@ -37,7 +37,7 @@ import {animate, style, transition, trigger} from '@angular/animations';
     // Loader Animation:
     // -----------------
     trigger('startAppLoader', [
-      transition(':leave',[
+      transition(':leave', [
         style({
           opacity: 1
         }),

@@ -1,9 +1,10 @@
 import { Injectable } from '@angular/core';
 import {BehaviorSubject, Observable, of} from 'rxjs';
 import {CUSTOMERS} from '../mock-data/mock-customers';
-import {delay, map} from 'rxjs/operators';
+import {delay, map, tap} from 'rxjs/operators';
 import {environment} from '../../environments/environment';
-import {AngularFireDatabase} from '@angular/fire/database';
+import {AngularFirestore} from '@angular/fire/firestore';
+import {Customer} from './customer';
 
 @Injectable({
   providedIn: 'root'
@@ -14,7 +15,7 @@ export class CustomersService {
   doneLoading = false;
 
 
-  constructor(private fireDatabase: AngularFireDatabase) { }
+  constructor(private firestore: AngularFirestore) { }
 
   // TODO: combine duplicate code
   getCustomers(): Observable<any> {
@@ -43,22 +44,21 @@ export class CustomersService {
       }
     } else {
       if (this.doneLoading) {
-        return this.fireDatabase.object('customers').valueChanges().pipe(
-          map(res => {
-            const customers = Object.entries(res).map(adjustCustomer);
+
+        return this.firestore.collection('customers').valueChanges().pipe(
+          tap(customers => {
             console.log('Live Customers from DB: ', customers);
-            return customers;
           })
         );
+
       } else {
-        return this.fireDatabase.object('customers').valueChanges().pipe(
+
+        return this.firestore.collection('customers').valueChanges().pipe(
           delay(environment.mockLoadingDelay),
-          map(res => {
-            const customers = Object.entries(res).map(adjustCustomer);
+          tap(customers => {
             console.log('Live Customers from DB: ', customers);
             this.loading.next(false);
             this.doneLoading = true;
-            return customers;
           })
         );
       }
@@ -67,9 +67,35 @@ export class CustomersService {
 
   getCustomer(id: string) {
 
-    return this.getCustomers().pipe(
-      map( customers => customers.find(customer => id === customer.id))
-    );
+    if (this.doneLoading) {
+      return this.firestore.collection('customers').doc<Customer>(id).valueChanges();
+    } else {
+      return this.firestore.collection('customers').doc<Customer>(id).valueChanges().pipe(
+        delay(environment.mockLoadingDelay),
+        tap(res => {
+          this.loading.next(false);
+          this.doneLoading = true;
+        })
+      );
+    }
+
+  }
+
+  getAllChats(id) {
+    if (environment.useMockDB){
+
+      return this.getCustomers().pipe(
+        map( customers => customers.find(customer => id === customer.id)),
+        map(customer => {
+          console.log(customer);
+          const chats = Object.values(customer.chats);
+          console.log(chats);
+          return chats;
+        })
+      );
+    } else {
+      return this.firestore.collection('customers').doc(id).collection('chats').valueChanges();
+    }
   }
 
 }

@@ -16,17 +16,10 @@ export class CustomerDetailDataComponent implements OnInit {
   ngOnInit() {
 
     this.route.params.pipe(
-      switchMap(params => this.customersService.getCustomer(params.id)),
-      map(customer => {
-        console.log(customer);
-        const chats = Object.values(customer.chats);
-        console.log(chats);
-        return chats;
-      })
-    )
+      switchMap(params => this.customersService.getAllChats(params.id)))
       .subscribe(chats => {
         this.chats = chats;
-        console.log(this.chats);
+        //console.log(this.chats);
       });
   }
 
