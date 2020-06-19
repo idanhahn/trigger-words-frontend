@@ -10,7 +10,7 @@
       <tr>
         <th>Conversation ID</th>
         <th>Time & Date</th>
-        <th>Operator ID</th>
+        <th>Conversation Type</th>
         <th>Content</th>
       </tr>
       </thead>
@@ -18,7 +18,7 @@
       <tr *ngFor="let chat of chats">
         <td>{{chat.conversationId}}</td>
         <td>{{chat.time | date:'dd/MM/yyyy'}}</td>
-        <td>{{chat.operatorId}}</td>
+        <td>{{chat.type}}</td>
         <td>
           <div class="content">
             {{chat.content}}

@@ -49,4 +49,11 @@ Thumbs.db
 
 # firestore_loader
 helpers/*/.idea
+helpers/.idea
 feedback-frontend-1447b-ab7db3dc025f.json
+helpers/*/dbs
+helpers/firestore-loader/mockDB.json
+helpers/chat-converter/data/*
+helpers/chat-converter/data
+helpers/chat-converter/output/*
+helpers/chat-converter/output

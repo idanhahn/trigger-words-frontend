@@ -2,6 +2,7 @@ import firebase_admin
 from firebase_admin import credentials
 from firebase_admin import firestore
 import json
+import sys
 
 
 def convertCustomer(orig, id):
@@ -26,8 +27,8 @@ def convertChat(orig, id):
     "id": id,
     "conversationId": orig['conversationId'],
     "time": orig['time'],
-    "operatorId": orig['operatorId'],
-    "content": orig['content']
+    "type": orig['type'],
+    "content": orig['msg']
   }
 
 
@@ -42,13 +43,16 @@ def convertFeedback(orig, id):
     }
   }
 
+target_json = './mockDB.json'
+if (len(sys.argv) > 1):
+  target_json = sys.argv[1]
 
 cred = credentials.Certificate('./feedback-frontend-1447b-ab7db3dc025f.json')
 firebase_admin.initialize_app(cred)
 
 db = firestore.client()
 
-with open('./mockDB.json') as f:
+with open(target_json) as f:
   d = json.load(f)
   for customerID in d['customers']:
 
